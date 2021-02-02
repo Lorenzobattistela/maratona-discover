@@ -58,7 +58,7 @@ button {
   color: white;
   background-color: #49aa26;
   padding: 0;
-  border-radius: 0.25;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
@@ -69,6 +69,21 @@ button:hover {
 .button.new {
   margin-bottom: 0.8rem;
   display: inline-block;
+}
+
+.button.cancel {
+  color: #e92929;
+  border: 2px #e92929 solid;
+  border-radius: 0.25rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.button.cancel:hover {
+  opacity: 1;
 }
 /*HEADER STYLE ------------------- */
 header {
@@ -188,6 +203,7 @@ td.expense {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 
 .modal-overlay.active {
@@ -198,6 +214,8 @@ td.expense {
 .modal {
   background: #f0f2f5;
   padding: 2.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* FORM STYLE ------------------*/
@@ -213,13 +231,14 @@ input {
   border: none;
   border-radius: 0.3em;
   padding: 0.8rem;
+  width: 100%;
 }
 
 .input-group {
   margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help {
   opacity: 0.4;
 }
 
